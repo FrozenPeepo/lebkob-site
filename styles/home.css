@@ -5,10 +5,15 @@ body {
   font-family: 'Paytone One', Arial;
   background-color: rgb(240, 240, 240);
   overflow-x: hidden;
+  user-select: none;
 }
 
 button {
   font-family: 'Paytone One', Arial;
+}
+
+img {
+  user-select: none;
 }
 
 /*====== Header =====*/
@@ -196,7 +201,7 @@ button {
 
 .section-2-main-container-lower {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 3fr;
 }
 
 .section-2-inner-container-text {
@@ -234,7 +239,34 @@ button {
 }
 
 .section-2-inner-container-image {
-  display: flex;
+  margin-left: 150px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-2-image-grid {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  column-gap: 20px;
+  row-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-2-image-grid img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border: 10px solid black;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  transition: all 0.15s;
+}
+
+.section-2-image-grid img:hover {
+  scale: 1.1;
+  box-shadow: 0 0 80px rgba(255, 255, 255, 1);
 }
 
 /* ===== Footer ===== */
@@ -249,6 +281,84 @@ button {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
+.footer-main-container-upper {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-about-container {
+  margin: 60px 0 -20px 100px;
+  display: grid;
+  grid-template-rows: 50px 5px 70px;
+  row-gap: 10px;
+}
+
+.footer-trademark {
+  align-self: center;
+  height: 50px;
+}
+
+.footer-divider-line {
+  background-color: black;
+  margin-top: 10px;
+  height: 5px;
+  width: 245px;
+  border-style: none;
+  border-radius: 20px;
+}
+
+.footer-quote {
+  font-size: 20px;
+}
+
+.footer-middle {
+  flex: 1
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  grid-template-columns: 100px 1fr;
+}
+
+.footer-contacts {
+  flex: 1;
+  display: grid;
+  margin-top: 40px;
+  margin-left: 200px;
+  grid-template-rows: 30px 20px 20px;
+  align-content: center;
+  row-gap: 20px;
+}
+
+.footer-contacts-title {
+  font-size: 23px;
+  padding-bottom: 20px;
+}
+
+.footer-contacts-facebook, .footer-contacts-email {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.footer-contacts-facebook-icon, .footer-contacts-email-icon {
+  filter: grayscale(100%);
+  width: 30px;
+}
+
+.footer-contacts-facebook-text, .footer-contacts-email-text {
+  margin: 8px 0;
+}
+
 .footer-main-container-lower {
+  justify-self: center;
+  font-size: 12px;
+  padding-top: 10px;
   padding-left: 35px;
 }
