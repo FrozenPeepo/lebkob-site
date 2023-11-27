@@ -1,5 +1,9 @@
 /*====== General =====*/
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 1000px;
   font-family: 'Paytone One', Arial;
@@ -70,13 +74,15 @@ img {
   transition: width 0.1s;
 }
 
-.header-right p {
+.header-right a {
+  text-decoration: none;
+  color: black;
   font-size: 25px;
-  margin-bottom: 7px;
+  margin-top: 10px;
   transition: scale 0.15s, transform 0.15s, font-size 0.1s;
 }
 
-.header-right p:hover {
+.header-home:hover {
   scale: 1.1;
   transform: translateY(-1px);
   cursor: pointer;
@@ -135,7 +141,7 @@ img {
 
 .section-1-background-overlay {
   position: absolute;
-  top: 15%;
+  top: 5%;
   left: 15%;
   width: 70%;
   height: 70%;
@@ -147,7 +153,7 @@ img {
 }
 
 .section-1-content {
-  margin-top: -50px;
+  margin-top: -130px;
   display: grid;
   grid-template-rows: 110px 110px 100px 110px;
   justify-content: center;
@@ -316,7 +322,36 @@ img {
 }
 
 .footer-middle {
-  flex: 1
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.footer-scroll-up-button {
+  padding: 10px;
+  margin-top: 70px;
+  height: 50px;
+  border: 6px solid black;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.15s;
+}
+
+.footer-scroll-up-button:hover {
+  scale: 1.1;
+  filter: invert(1);
+  border-color: white;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.3);
+  animation: scroll-up-hover-anim 0.3s ease-out 1;
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+@keyframes scroll-up-hover-anim {
+  0% { transform: translateY(0)}
+  50% { transform: translateY(-10px)}
+  100% { transform: translateY(-5px)}
 }
 
 .footer-right {
@@ -349,16 +384,24 @@ img {
 
 .footer-contacts-facebook-icon, .footer-contacts-email-icon {
   filter: grayscale(100%);
+  margin-top: 8px;
   width: 30px;
 }
 
 .footer-contacts-facebook-text, .footer-contacts-email-text {
-  margin: 8px 0;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  margin: 8px 180px 8px 15px;
+  transition: scale 0.15s;
+}
+
+.footer-contacts-facebook-text:hover, .footer-contacts-email-text:hover {
+  scale: 1.1;
 }
 
 .footer-main-container-lower {
   justify-self: center;
   font-size: 12px;
   padding-top: 10px;
-  padding-left: 35px;
 }
