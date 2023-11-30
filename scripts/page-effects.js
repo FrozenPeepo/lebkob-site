@@ -33,4 +33,4 @@ function createScrollEffect() {
   window.addEventListener('scroll', handleScroll);
 }
 
-createScrollEffect();
+/*createScrollEffect();*/

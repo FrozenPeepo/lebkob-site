@@ -445,48 +445,118 @@ img {
     margin-right: 15px;
   }
   
-.section-1-background-overlay {
-  top: 5%;
-  left: 15%;
-  width: 70%;
-  height: 70%;
-  background: rgba(255, 255, 255, 1);
-  mix-blend-mode: screen;
-  border-radius: 100%;
-  filter: blur(100px);
-  z-index: -5;
+  .section-1-background-overlay {
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    background: rgba(255, 255, 255, 1);
+    mix-blend-mode: screen;
+    border-radius: 100%;
+    filter: blur(100px);
+    z-index: -5;
+  }
+
+  .section-1-content {
+    margin-top: -100px;
+    grid-template-rows: 110px 110px 100px 110px;
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .section-1-welcome {
+    text-align: center;
+    font-size: 80px;
+  }
+
+  .section-1-to-page {
+    text-align: center;
+    font-size: 25px;
+    margin-top: -50px;
+  }
+
+  .section-1-logo {
+    margin-top: -70px;
+    height: 50px;
+    justify-self: center;
+    object-fit: contain;
+  }
+
+  .section-1-stay-tuned {
+    text-align: center;
+    font-size: 25px;
+    margin-top: -50px;
+  }
 }
 
-.section-1-content {
-  margin-top: -100px;
-  grid-template-rows: 110px 110px 100px 110px;
-  width: 500px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
+@media (max-width: 700px) {
+  .header-lebkob-trademark {
+    margin-left: 15px;
+    height: 40px;
+  }
 
-.section-1-welcome {
-  text-align: center;
-  font-size: 80px;
-}
+  .header-middle {
+    display: none;
+  }
 
-.section-1-to-page {
-  text-align: center;
-  font-size: 25px;
-  margin-top: -50px;
-}
+  .header-right {
+    width: 250px;
+  }
+  
+  .header-right a {
+    font-size: 12px;
+  }
 
-.section-1-logo {
-  margin-top: -70px;
-  height: 50px;
-  justify-self: center;
-  object-fit: contain;
-}
+  .team-button {
+    font-size: 17px;
+    padding: 4px 15px;
+    margin-right: 10px;
+  }
 
-.section-1-stay-tuned {
-  text-align: center;
-  font-size: 25px;
-  margin-top: -50px;
-}
+  .section-1-background-overlay {
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+    background: rgba(255, 255, 255, 1);
+    mix-blend-mode: screen;
+    border-radius: 100%;
+    filter: blur(100px);
+    z-index: -5;
+  }
+
+  .section-1-content {
+    margin-top: -100px;
+    grid-template-rows: 110px 110px 100px 110px;
+    width: 350px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .section-1-welcome {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .section-1-to-page {
+    text-align: center;
+    font-size: 18px;
+    margin-top: -80px;
+  }
+
+  .section-1-logo {
+    margin-top: -155px;
+    height: 45px;
+    justify-self: center;
+    object-fit: contain;
+  }
+
+  .section-1-stay-tuned {
+    text-align: center;
+    font-size: 18px;
+    margin-top: -180px;
+  }
 }
